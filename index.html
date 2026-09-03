@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#050505" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Amirtaha Nemati — Software Developer (Frontend, Backend & Desktop Apps)</title>
+    <meta name="description" content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron. See recent projects and get in touch." />
+    <meta name="author" content="Amirtaha Nemati" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://amirtahanemati.github.io/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://amirtahanemati.github.io/" />
+    <meta property="og:site_name" content="Amirtaha Nemati" />
+    <meta property="og:title" content="Amirtaha Nemati — Software Developer" />
+    <meta property="og:description" content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron." />
+    <meta property="og:image" content="https://amirtahanemati.github.io/amirtaha-profile.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fa_IR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amirtaha Nemati — Software Developer" />
+    <meta name="twitter:description" content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron." />
+    <meta name="twitter:image" content="https://amirtahanemati.github.io/amirtaha-profile.webp" />
+    <meta name="twitter:creator" content="@amirtahanemati" />
+
+    <link rel="alternate" hreflang="en" href="https://amirtahanemati.github.io/?lang=en" />
+    <link rel="alternate" hreflang="fa" href="https://amirtahanemati.github.io/?lang=fa" />
+    <link rel="alternate" hreflang="x-default" href="https://amirtahanemati.github.io/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    <link rel="preload" as="image" href="/amirtaha-profile.webp" fetchpriority="high" />
+    <script>
+      (function () {
+        var q = new URLSearchParams(location.search).get("lang");
+        var lang =
+          q === "fa" || q === "en"
+            ? q
+            : localStorage.getItem("amirtaha-language") === "fa" ||
+                localStorage.getItem("amirtaha-language") === "en"
+              ? localStorage.getItem("amirtaha-language")
+              : navigator.language.toLowerCase().indexOf("fa") === 0
+                ? "fa"
+                : "en";
+        if (lang === "fa") {
+          [
+            "/fonts/Rokh-UltraBold.woff2",
+            "/fonts/Dana-DemiBold.woff2",
+            "/fonts/Peyda-Regular.woff2",
+          ].forEach(function (href) {
+            var link = document.createElement("link");
+            link.rel = "preload";
+            link.as = "font";
+            link.type = "font/woff2";
+            link.href = href;
+            link.crossOrigin = "anonymous";
+            document.head.appendChild(link);
+          });
+        }
+      })();
+    </script>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/amirtaha-profile.webp" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Amirtaha Nemati",
+        "url": "https://amirtahanemati.github.io/",
+        "image": "https://amirtahanemati.github.io/amirtaha-profile.webp",
+        "jobTitle": "Software Developer",
+        "email": "mailto:amirtahanemati0@gmail.com",
+        "address": { "@type": "PostalAddress", "addressCountry": "IR" },
+        "sameAs": [
+          "https://github.com/amirtahanemati",
+          "https://www.linkedin.com/in/amirtahanemati/",
+          "https://instagram.com/amirtahanemati",
+          "https://x.com/amirtahanemati"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
