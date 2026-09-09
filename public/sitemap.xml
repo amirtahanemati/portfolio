@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://amirtahanemati.github.io/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://amirtahanemati.github.io/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="fa" href="https://amirtahanemati.github.io/?lang=fa" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://amirtahanemati.github.io/" />
+    <loc>https://tahanemati.ir/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tahanemati.ir/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://tahanemati.ir/?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tahanemati.ir/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
