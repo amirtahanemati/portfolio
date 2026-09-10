@@ -1,10 +1,9 @@
-import { Send } from 'lucide-react'
-import { motion } from 'motion/react'
-import { profile } from '../data/portfolio'
-import { useLanguage } from '../i18n'
+import { motion } from "motion/react";
+import { profile } from "../data/portfolio";
+import { useLanguage } from "../i18n";
 
 export function TelegramBanner() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section className="section shell" id="telegram">
@@ -15,15 +14,34 @@ export function TelegramBanner() {
         rel="noreferrer"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: .3 }}
-        transition={{ duration: .7, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         data-cursor="active"
       >
         <div className="tg-banner__visual" dir="ltr">
           <div className="tg-banner__glow" />
-          <span className="tg-banner__ring">
-            <Send size={30} strokeWidth={1.6} />
-          </span>
+
+          <motion.img
+            src="/icons/telegram-3d.png"
+            alt="Telegram 3D"
+            style={{
+              width: "130px",
+              height: "130px",
+              objectFit: "contain",
+              position: "relative",
+              zIndex: 2,
+              filter: "drop-shadow(0 15px 25px rgba(42, 171, 238, 0.35))",
+            }}
+            animate={{
+              y: [-10, 10, -10],
+              rotate: [-2, 3, -2],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
         </div>
 
         <div className="tg-banner__info">
@@ -32,10 +50,12 @@ export function TelegramBanner() {
           <p>{t.telegram.copy}</p>
           <span className="tg-banner__cta">
             {t.telegram.cta}
-            <b className="latin" dir="ltr">{profile.telegramHandle}</b>
+            <b className="latin" dir="ltr">
+              {profile.telegramHandle}
+            </b>
           </span>
         </div>
       </motion.a>
     </section>
-  )
+  );
 }
