@@ -71,20 +71,20 @@ export const projects: Project[] = [
     accent: "MOBILE / SCHEDULE",
     image: "/projects/course-selection.jpg",
   },
+  // {
+  //   index: "03",
+  //   name: "Smart Deploy",
+  //   description: {
+  //     en: "A robust, proxy-aware CI/CD tool with a centralized Telegram bot for real-time deployment logs, automated webhooks, and local network restriction bypass.",
+  //     fa: "ابزار CI/CD قدرتمند و پروکسی‌پذیر با ربات مرکزی تلگرام برای دریافت لاگ‌های استقرار لحظه‌ای، وب‌هوک‌های خودکار و دور زدن محدودیت‌های شبکه داخلی.",
+  //   },
+  //   tech: ["Python", "FastAPI", "Typer", "Telegram Bot", "CI/CD"],
+  //   url: "https://github.com/amirtahanemati/smart-deploy",
+  //   accent: "DEVOPS / AUTOMATION",
+  //   image: "/projects/smart-deploy.jpg",
+  // },
   {
     index: "03",
-    name: "Smart Deploy",
-    description: {
-      en: "A robust, proxy-aware CI/CD tool with a centralized Telegram bot for real-time deployment logs, automated webhooks, and local network restriction bypass.",
-      fa: "ابزار CI/CD قدرتمند و پروکسی‌پذیر با ربات مرکزی تلگرام برای دریافت لاگ‌های استقرار لحظه‌ای، وب‌هوک‌های خودکار و دور زدن محدودیت‌های شبکه داخلی.",
-    },
-    tech: ["Python", "FastAPI", "Typer", "Telegram Bot", "CI/CD"],
-    url: "https://github.com/amirtahanemati/smart-deploy",
-    accent: "DEVOPS / AUTOMATION",
-    image: "/projects/smart-deploy.jpg",
-  },
-  {
-    index: "04",
     name: "Digital Cafe Menu",
     description: {
       en: "A mobile-first digital menu for cafés built with React, TypeScript and Tailwind CSS — cart, category filters, live open/closed status and full Persian RTL support.",
