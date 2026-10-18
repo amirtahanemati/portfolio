@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nemroTurquoise" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#00E5C0"/>
+    </linearGradient>
+    <linearGradient id="nemroNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B192C"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logomark -->
+  <g transform="translate(25, 10)">
+    <!-- Nun Bowl -->
+    <path d="M 20 54 C 20 90 40 106 68 106 C 96 106 116 90 116 54" 
+          fill="none" 
+          stroke="url(#nemroNavy)" 
+          stroke-width="16" 
+          stroke-linecap="round"/>
+    
+    <!-- Dynamic Checkmark to Arrow -->
+    <path d="M 34 52 L 60 80 L 114 20" 
+          fill="none" 
+          stroke="url(#nemroTurquoise)" 
+          stroke-width="15" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <!-- Arrow Head -->
+    <polygon points="120,13 97,18 110,31" fill="#00E5C0" />
+    
+    <!-- Milestone Node (Amber Dot) -->
+    <circle cx="122" cy="11" r="7.5" fill="#F59E0B" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(180, 20)">
+    <!-- Persian Logo Text -->
+    <text x="0" y="66" font-family="'Peyda', 'Dana', system-ui, sans-serif" font-weight="900" font-size="58" fill="#0B192C" letter-spacing="-1">نِمـرو</text>
+    <!-- Accent Dot on Nun -->
+    <circle cx="205" cy="18" r="6" fill="#F59E0B" />
+    <!-- English Subtitle -->
+    <text x="5" y="94" font-family="system-ui, -apple-system, 'Inter', sans-serif" font-weight="800" font-size="16" fill="#0B192C" letter-spacing="6">NEMRO</text>
+    <text x="135" y="94" font-family="'Peyda', 'Dana', sans-serif" font-weight="700" font-size="12" fill="#00B4D8">| تحلیل هوشمند آزمون</text>
+  </g>
+</svg>
