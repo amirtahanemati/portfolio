@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -9,37 +9,53 @@
     <meta name="theme-color" content="#050505" />
     <meta name="color-scheme" content="dark" />
 
-    <title>
-      Amirtaha Nemati — Software Developer (Frontend, Backend & Desktop Apps)
-    </title>
+    <!-- Primary Title: Amirtaha Nemati -->
+    <title>امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار | پورتفولیو</title>
+    <meta
+      name="title"
+      content="امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار | پورتفولیو"
+    />
     <meta
       name="description"
-      content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron. See recent projects and get in touch."
+      content="وب‌سایت رسمی و نمونه‌کارهای امیرطاها نعمتی؛ برنامه‌نویس فول‌استک، وب، موبایل و دسکتاپ. مشاهده پروژه‌های واقعی شامل سامانه جامع نمرو و اپلیکیشن ابزار انتخاب واحد در مایکت."
     />
-    <meta name="author" content="Amirtaha Nemati" />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="امیرطاها نعمتی, طاها نعمتی, امیرطاها نعمتی برنامه نویس, امیرطاها نعمتی توسعه دهنده, امیر طاها نعمتی, نعمتی, امیرطاها نعمتی مهندس کامپیوتر, مسابقات ict challenge, مسابقات برنامه نویسی شریف, تیم lornux, افتخارات امیرطاها نعمتی, افتخارات طاها نعمتی, مسابقات برنامه نویسی کشوری, دانشگاه صنعتی شریف, amirtaha nemati, taha nemati, tahanemati, tahanemati.ir, برنامه نویس پایتون, برنامه نویس ری اکت, برنامه نویس فست ای پی آی, اپلیکیشن انتخاب واحد مایکت, سامانه نمرو, ابزار انتخاب واحد"
+    />
+    <meta name="author" content="امیرطاها نعمتی - Amirtaha Nemati" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://tahanemati.ir/" />
 
-    <meta property="og:type" content="website" />
+    <!-- Open Graph / Facebook / Telegram / WhatsApp -->
+    <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://tahanemati.ir/" />
-    <meta property="og:site_name" content="Amirtaha Nemati" />
-    <meta property="og:title" content="Amirtaha Nemati — Software Developer" />
+    <meta property="og:site_name" content="امیرطاها نعمتی — توسعه‌دهنده نرم‌افزار" />
+    <meta
+      property="og:title"
+      content="امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار"
+    />
     <meta
       property="og:description"
-      content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron."
+      content="پورتفولیو و نمونه کارهای امیرطاها نعمتی؛ سازنده سامانه آزمون نمرو و اپلیکیشن ابزار انتخاب واحد در مارکت مایکت."
     />
     <meta
       property="og:image"
       content="https://tahanemati.ir/amirtaha-profile.webp"
     />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="fa_IR" />
+    <meta property="og:locale" content="fa_IR" />
+    <meta property="og:locale:alternate" content="en_US" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amirtaha Nemati — Software Developer" />
+    <meta name="twitter:url" content="https://tahanemati.ir/" />
+    <meta
+      name="twitter:title"
+      content="امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار"
+    />
     <meta
       name="twitter:description"
-      content="Portfolio of Amirtaha Nemati, a software developer from Iran building web, desktop and backend products with React, FastAPI and Electron."
+      content="پورتفولیو و نمونه کارهای واقعی امیرطاها نعمتی؛ سازنده سامانه نمرو و اپلیکیشن مایکت."
     />
     <meta
       name="twitter:image"
@@ -47,10 +63,12 @@
     />
     <meta name="twitter:creator" content="@amirtahanemati" />
 
-    <link rel="alternate" hreflang="en" href="https://tahanemati.ir/?lang=en" />
+    <!-- Hreflang alternates -->
     <link rel="alternate" hreflang="fa" href="https://tahanemati.ir/?lang=fa" />
+    <link rel="alternate" hreflang="en" href="https://tahanemati.ir/?lang=en" />
     <link rel="alternate" hreflang="x-default" href="https://tahanemati.ir/" />
 
+    <!-- Preconnect & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,71 +81,200 @@
       href="/amirtaha-profile.webp"
       fetchpriority="high"
     />
-    <script>
-      (function () {
-        var q = new URLSearchParams(location.search).get("lang");
-        var lang =
-          q === "fa" || q === "en"
-            ? q
-            : localStorage.getItem("amirtaha-language") === "fa" ||
-                localStorage.getItem("amirtaha-language") === "en"
-              ? localStorage.getItem("amirtaha-language")
-              : navigator.language.toLowerCase().indexOf("fa") === 0
-                ? "fa"
-                : "en";
-        if (lang === "fa") {
-          [
-            "/fonts/Rokh-UltraBold.woff2",
-            "/fonts/Dana-DemiBold.woff2",
-            "/fonts/Peyda-Regular.woff2",
-          ].forEach(function (href) {
-            var link = document.createElement("link");
-            link.rel = "preload";
-            link.as = "font";
-            link.type = "font/woff2";
-            link.href = href;
-            link.crossOrigin = "anonymous";
-            document.head.appendChild(link);
-          });
-        }
-      })();
-    </script>
+
+    <!-- Persian Font Preloading -->
+    <link
+      rel="preload"
+      href="/fonts/Rokh-UltraBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Dana-DemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/Peyda-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/amirtaha-profile.webp" />
+
+    <!-- Enhanced Schema.org Structured Data Graph -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Amirtaha Nemati",
-        "alternateName": "امیرطاها نعمتی",
-        "url": "https://tahanemati.ir/",
-        "image": "https://tahanemati.ir/amirtaha-profile.webp",
-        "jobTitle": "Software Developer",
-        "knowsAbout": [
-          "React",
-          "TypeScript",
-          "Tailwind CSS",
-          "FastAPI",
-          "WebRTC",
-          "Electron"
-        ],
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Lorestan University"
-        },
-        "email": "mailto:amirtahanemati0@gmail.com",
-        "address": { "@type": "PostalAddress", "addressCountry": "IR" },
-        "sameAs": [
-          "https://github.com/amirtahanemati",
-          "https://www.linkedin.com/in/amirtahanemati/",
-          "https://instagram.com/amirtahanemati",
-          "https://x.com/amirtahanemati"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://tahanemati.ir/#person",
+            "name": "امیرطاها نعمتی",
+            "alternateName": [
+              "طاها نعمتی",
+              "امیر طاها نعمتی",
+              "Amirtaha Nemati",
+              "Taha Nemati",
+              "Amirtaha Nemati Software Developer"
+            ],
+            "givenName": "Amirtaha",
+            "additionalName": "Taha",
+            "familyName": "Nemati",
+            "gender": "Male",
+            "nationality": "Iranian",
+            "url": "https://tahanemati.ir/",
+            "mainEntityOfPage": "https://tahanemati.ir/",
+            "image": "https://tahanemati.ir/amirtaha-profile.webp",
+            "jobTitle": "توسعه‌دهنده نرم‌افزار و مهندس کامپیوتر (Software Developer)",
+            "description": "امیرطاها نعمتی توسعه‌دهنده نرم‌افزار در حوزه وب، موبایل و دسکتاپ. خالق سامانه جامع آزمون آنلاین نمرو و اپلیکیشن کاربردی ابزار انتخاب واحد منتشر شده در مایکت.",
+            "knowsAbout": [
+              "FastAPI",
+              "Python",
+              "React",
+              "React Native",
+              "TypeScript",
+              "Tailwind CSS",
+              "Electron",
+              "KaTeX",
+              "LaTeX",
+              "SQLAlchemy",
+              "Docker",
+              "PostgreSQL",
+              "Android EAS / Expo"
+            ],
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "دانشگاه لرستان - Lorestan University"
+            },
+            "award": [
+              "کسب مقام دوم کشوری (نایب‌قهرمانی و مدال نقره) در یازدهمین دوره مسابقات برنامه‌نویسی چالش‌های فناوری (ICT Challenge 11) - دانشگاه صنعتی شریف (۱۴۰۵)",
+              "کسب مقام سوم کشوری (مدال برنز) در دهمین دوره مسابقات برنامه‌نویسی چالش‌های فناوری (ICT Challenge 10) - دانشگاه صنعتی شریف (۱۴۰۴)"
+            ],
+            "email": "mailto:amirtahanemati0@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IR"
+            },
+            "sameAs": [
+              "https://github.com/amirtahanemati",
+              "https://myket.ir/app/com.amirtaha.courseselection",
+              "https://www.linkedin.com/in/amirtahanemati/",
+              "https://t.me/nematidev",
+              "https://instagram.com/amirtahanemati",
+              "https://x.com/amirtahanemati"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tahanemati.ir/#website",
+            "url": "https://tahanemati.ir/",
+            "name": "امیرطاها نعمتی — وب‌سایت و پورتفولیوی رسمی | Amirtaha Nemati",
+            "description": "پورتفولیو و نمونه کارهای امیرطاها نعمتی توسعه‌دهنده نرم‌افزار",
+            "publisher": {
+              "@id": "https://tahanemati.ir/#person"
+            },
+            "inLanguage": ["fa-IR", "en-US"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://tahanemati.ir/#courseselection",
+            "name": "ابزار انتخاب واحد (CourseSelection Mobile)",
+            "operatingSystem": "Android",
+            "applicationCategory": "EducationalApplication",
+            "author": {
+              "@id": "https://tahanemati.ir/#person"
+            },
+            "installUrl": "https://myket.ir/app/com.amirtaha.courseselection",
+            "description": "اپلیکیشن اندرویدی ابزار انتخاب واحد توسعه‌داده شده توسط امیرطاها نعمتی و منتشر شده در استور مایکت با امتیاز کامل ۵.۰.",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "6",
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://nemro.ir",
+            "name": "سامانه جامع آزمون آنلاین نمرو (Nemro)",
+            "applicationCategory": "AssessmentApplication",
+            "author": {
+              "@id": "https://tahanemati.ir/#person"
+            },
+            "url": "https://nemro.ir",
+            "sameAs": "https://tahanemati.ir/projects/nemro",
+            "description": "سامانه هوشمند برگزاری آزمون‌های آنلاین، فرمول‌ساز KaTeX و تصحیح اوراق تشریحی توسعه‌یافته با FastAPI و React توسط امیرطاها نعمتی."
+          }
         ]
       }
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Prerendered Semantic HTML Content for Search Engine Bots (Crawlable without JS) -->
+    <div id="root">
+      <header style="padding: 20px; text-align: center;">
+        <h1>امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار</h1>
+        <p>پورتفولیوی رسمی امیرطاها نعمتی. توسعه‌دهنده وب، موبایل و دسکتاپ با پایتون، ری‌اکت و ری‌اکت نیتیو.</p>
+      </header>
+
+      <main style="max-width: 900px; margin: 0 auto; padding: 20px;">
+        <section>
+          <h2>درباره امیرطاها نعمتی</h2>
+          <p>من امیرطاها نعمتی هستم، توسعه‌دهنده نرم‌افزار و مهندس کامپیوتر. در حوزه طراحی وب‌سایت‌های فول‌استک، اپلیکیشن‌های موبایل و نرم‌افزارهای دسکتاپ فعالیت می‌کنم.</p>
+        </section>
+
+        <section>
+          <h2>پروژه‌ها و نمونه‌کارهای واقعی امیرطاها نعمتی</h2>
+          <ul>
+            <li>
+              <h3><a href="https://nemro.ir" target="_blank" rel="noreferrer">سامانه جامع آزمون آنلاین نمرو (nemro.ir)</a> — <a href="/projects/nemro">بررسی معماری سامانه</a></h3>
+              <p>پلتفرم پیشرفته برگزاری آزمون‌های آنلاین با موتور فرمول‌نویسی KaTeX، بانک سوالات هوشمند و کارتابل تصحیح اوراق تشریحی، ساخته شده با FastAPI و React.</p>
+            </li>
+            <li>
+              <h3><a href="/projects/course-selection">اپلیکیشن ابزار انتخاب واحد در مایکت (CourseSelection Mobile)</a></h3>
+              <p>اپلیکیشن اندرویدی منتشر شده در استور مایکت توسط امیرطاها نعمتی با امتیاز ۵.۰ برای حل تداخل دروس دانشگاهی و ساخت جدول هفتگی.</p>
+            </li>
+            <li>
+              <h3><a href="/projects/color-palette">نرم‌افزار دسکتاپ استخراج پالت رنگ (Color Palette Extractor)</a></h3>
+              <p>اپلیکیشن دسکتاپ آفلاین بر پایه Electron و FastAPI با یادگیری ماشین K-Means برای استخراج پالت رنگ تصاویر.</p>
+            </li>
+            <li>
+              <h3><a href="/projects/cafe-menu">منوی دیجیتال کافه (Digital Cafe Menu)</a></h3>
+              <p>وب‌اپلیکیشن منوی آنلاین تعاملی و پرسرعت برای کافه‌ها و رستوران‌ها ساخته شده با React و Tailwind CSS.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>افتخارات و مسابقات برنامه‌نویسی کشوری امیرطاها نعمتی</h2>
+          <ul>
+            <li>
+              <strong>مقام دوم (نایب‌قهرمانی کشوری) در یازدهمین دوره مسابقات برنامه‌نویسی چالش‌های فناوری (ICT Challenge 11):</strong>
+              برگزار شده در دانشگاه صنعتی شریف به همراه تیم Lornux از دانشگاه لرستان (امیرطاها نعمتی).
+            </li>
+            <li>
+              <strong>مقام سوم کشوری در دهمین دوره مسابقات برنامه‌نویسی چالش‌های فناوری (ICT Challenge 10):</strong>
+              برگزار شده در دانشگاه صنعتی شریف و مرکز نوآوری شریف.
+            </li>
+          </ul>
+          <p>بازتاب در خبرگزاری‌های رسمی کشور، صدا و سیما، گویا آی‌تی، روزیاتو و شریف ICT.</p>
+        </section>
+
+        <section>
+          <h2>ارتباط با امیرطاها نعمتی</h2>
+          <p>ایمیل: amirtahanemati0@gmail.com | تلگرام: @nematidev | گیت‌هاب: amirtahanemati</p>
+        </section>
+      </main>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
