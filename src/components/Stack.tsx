@@ -8,7 +8,7 @@ export function Stack() {
 
   return (
     <section className="section shell" id="stack">
-      <SectionIntro number="03" eyebrow={t.stack.eyebrow} title={t.stack.title} />
+      <SectionIntro number="04" eyebrow={t.stack.eyebrow} title={t.stack.title} />
       <div className="stack-grid">
         {skillGroups.map((group, i) => (
           <motion.div

@@ -1,6 +1,7 @@
-import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight, Menu, X } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useState } from 'react'
+import { useRouter } from '../context/RouterContext'
 import { profile } from '../data/portfolio'
 import { useLanguage } from '../i18n'
 import { GitHubMark } from './BrandMarks'
@@ -8,36 +9,85 @@ import { LanguageSwitch } from './LanguageSwitch'
 
 export function Nav() {
   const [open, setOpen] = useState(false)
-  const { t } = useLanguage()
+  const { lang, t } = useLanguage()
+  const { navigate, isProjectPage } = useRouter()
 
   const links = [
     [t.nav.about, '#about'],
     [t.nav.work, '#work'],
+    [t.nav.honors, '#honors'],
     [t.nav.stack, '#stack'],
     [t.nav.contact, '#contact'],
   ]
 
+  const isRtl = lang === 'fa'
+
+  const handleLinkClick = (href: string) => {
+    setOpen(false)
+    navigate(href)
+  }
+
   return (
     <header className="nav-wrap">
       <nav className="nav shell" aria-label={t.nav.primaryNavigation}>
-        <a className="brand latin" href="#top" aria-label={`AMIRTAHA — ${t.nav.backToTop}`}>
-          AMIRTAHA<span>®</span>
-        </a>
+        <div className="nav__brand-group">
+          <button
+            type="button"
+            className="brand latin"
+            onClick={() => navigate('/')}
+            aria-label={`AMIRTAHA — ${t.nav.backToTop}`}
+          >
+            AMIRTAHA<span>®</span>
+          </button>
+
+          {isProjectPage && (
+            <button
+              type="button"
+              className="nav__project-back-pill"
+              onClick={() => navigate('/#work')}
+              data-cursor="active"
+            >
+              {isRtl ? <ArrowRight size={14} /> : <ArrowLeft size={14} />}
+              <span>{t.nav.backToHome}</span>
+            </button>
+          )}
+        </div>
 
         <div className="nav__links">
           {links.map(([label, href]) => (
-            <a key={href} href={href}>{label}</a>
+            <button
+              key={href}
+              type="button"
+              className="nav__link-btn"
+              onClick={() => handleLinkClick(href)}
+            >
+              {label}
+            </button>
           ))}
         </div>
 
         <div className="nav__right">
           <LanguageSwitch compact />
           <div className="nav__socials">
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn profile" className="latin">
-              <span className="linkedin-mark">in</span><span>LinkedIn</span>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn profile"
+              className="latin"
+            >
+              <span className="linkedin-mark">in</span>
+              <span>LinkedIn</span>
             </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub profile" className="latin">
-              <GitHubMark size={17} /><span>GitHub</span>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub profile"
+              className="latin"
+            >
+              <GitHubMark size={17} />
+              <span>GitHub</span>
             </a>
           </div>
         </div>
@@ -64,17 +114,45 @@ export function Nav() {
             <span>{t.nav.language}</span>
             <LanguageSwitch />
           </div>
+
+          {isProjectPage && (
+            <button
+              type="button"
+              className="mobile-nav__back-home"
+              onClick={() => handleLinkClick('/')}
+            >
+              {isRtl ? <ArrowRight size={16} /> : <ArrowLeft size={16} />}
+              <span>{t.nav.backToHome}</span>
+            </button>
+          )}
+
           {links.map(([label, href], index) => (
-            <a key={href} href={href} onClick={() => setOpen(false)}>
+            <button
+              key={href}
+              type="button"
+              className="mobile-nav__link-btn"
+              onClick={() => handleLinkClick(href)}
+            >
               <span className="mobile-nav__index latin">0{index + 1}</span>
               <span>{label}</span>
-            </a>
+            </button>
           ))}
+
           <div className="mobile-nav__external latin">
-            <a href={profile.linkedin} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+            >
               LinkedIn <ArrowUpRight size={18} />
             </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+            >
               GitHub <ArrowUpRight size={18} />
             </a>
           </div>

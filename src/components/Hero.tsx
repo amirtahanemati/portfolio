@@ -127,7 +127,13 @@ export function Hero() {
           transition={{ delay: 0.25, duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="hero__portrait-frame">
-            <img src="/amirtaha-profile.webp" alt="Amirtaha Nemati" width="1100" height="1467" fetchPriority="high" />
+            <img
+              src="/amirtaha-profile.webp"
+              alt={lang === "fa" ? "امیرطاها نعمتی — برنامه‌نویس و توسعه‌دهنده نرم‌افزار" : "Amirtaha Nemati — Software Developer"}
+              width="1100"
+              height="1467"
+              fetchPriority="high"
+            />
             <div className="hero__portrait-overlay" aria-hidden="true" />
             <span className="hero__portrait-label latin">
               {t.hero.portraitLabel}

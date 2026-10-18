@@ -11,7 +11,7 @@ export function Contact() {
       <div className="shell contact__inner">
         <div className="contact__meta">
           <span>
-            <b className="latin">04</b> / {t.contact.eyebrow}
+            <b className="latin">05</b> / {t.contact.eyebrow}
           </span>
           <span>{t.contact.question}</span>
         </div>
