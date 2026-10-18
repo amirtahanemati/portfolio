@@ -4,7 +4,6 @@ import { Cursor } from './components/Cursor'
 import { Hero } from './components/Hero'
 import { Honors } from './components/Honors'
 import { LazyMount } from './components/LazyMount'
-import { Loader } from './components/Loader'
 import { Nav } from './components/Nav'
 import { ProjectDetail } from './components/ProjectDetail'
 import { Stack } from './components/Stack'
@@ -18,7 +17,6 @@ export default function App() {
 
   return (
     <>
-      <Loader />
       <Cursor />
       <div className="page-grid" aria-hidden="true" />
       <Nav />

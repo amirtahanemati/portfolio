@@ -210,57 +210,6 @@ main {
   mask-image: linear-gradient(to bottom, black 0%, transparent 82%);
 }
 
-.loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  padding: 30px 36px;
-  display: grid;
-  grid-template: auto 1fr auto / 1fr 1fr;
-  background: var(--accent);
-  color: #050505;
-}
-.loader__brand {
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  font-size: 22px;
-}
-.loader__meta {
-  justify-self: end;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-html[data-lang="fa"] .loader__meta {
-  font-family: var(--font-fa-ui);
-  letter-spacing: 0;
-}
-.loader__count {
-  grid-column: 1 / -1;
-  align-self: end;
-  font-family: var(--font-en);
-  font-size: clamp(100px, 25vw, 360px);
-  line-height: 0.72;
-  font-weight: 900;
-  letter-spacing: -0.08em;
-}
-html[data-lang="fa"] .loader__count {
-  font-family: var(--font-fa-display);
-  letter-spacing: -0.03em;
-}
-.loader__rail {
-  grid-column: 1 / -1;
-  align-self: end;
-  height: 4px;
-  margin-top: 32px;
-  background: rgba(0, 0, 0, 0.16);
-}
-.loader__rail span {
-  display: block;
-  height: 100%;
-  background: #050505;
-  transition: width 0.06s linear;
-}
 
 .cursor {
   position: fixed;
